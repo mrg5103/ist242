@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo -e "\e[31mThis may take up to 5 minutes\e[0m"
+
 if [ -z "$1" ]
 then
     echo '[-] Please inform an host as parameter'
